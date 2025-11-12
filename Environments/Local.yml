@@ -1,0 +1,43 @@
+app:
+  name: "mobile-banking-service"
+  debug: true
+  port: "3000"
+  host: "localhost"
+  service: "http"
+  certificate :
+  pem_key :
+databases:
+  - name: "bridgedev"
+    engine: "mysql"
+    username: "root"
+    password: "fd402218f600cb02"
+    port: "3306"
+    host: "localhost"
+    maximum_connection: 20
+    usage: "Main databases!"
+    connection: "mainDB"
+  - name: ""
+    engine: "redis"
+    username: ""
+    password: ""
+    port: "6379"
+    host: "localhost"
+    maximum_connection: 20
+    usage: "Main databases!"
+    connection: "mainDBRedis"
+api:
+  read_timeout: 30
+  write_timeout: 30
+jwt:
+  secretkey: "971231njmksdj123j123ksidj1"
+  encrypt: "HS256"
+sentry:
+  stage: "local"
+  key: "https://4c4f85949c8440a1b5baf11d4be76037@sentry.io/1776409"
+rabbitmq:
+  scheme: "amqp"
+  username: "guest"
+  password: "guest"
+  port: "5672"
+  host: "localhost"
+  vhost: "/"
